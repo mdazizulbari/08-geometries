@@ -35,6 +35,10 @@ const positionsArray = new Float32Array([
 // positionsArray[7] = 0;
 // positionsArray[8] = 0;
 
+const positionAttribute = new THREE.BufferAttribute(positionsArray, 3);
+const geometry = new THREE.BufferGeometry();
+geometry.setAttribute("position", positionAttribute);
+
 const material = new THREE.MeshBasicMaterial({
   color: 0xff0000,
   wireframe: true,
